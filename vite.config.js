@@ -22,7 +22,7 @@ export default defineConfig(() => {
                 ignoreTryCatch: false,
             },
             lib: {
-                entry: path.resolve(__dirname, './src/starterIndex.ts'),
+                entry: path.resolve(__dirname, './src/virtualHotkeyIndex.ts'),
                 formats: ['cjs'],
             },
             css: {},
