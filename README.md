@@ -1,43 +1,33 @@
-# obsidian-svelte-starter
+# obsidian-virtual-hotkey-board
 
-A starter template for creating an Obsidian plugin with SvelteJS.
+A plugin for showing hotkeys based on a keyboard layout in Obsidian .
 
 # Features
 
-This project comes preconfigured with [Typescript](https://www.typescriptlang.org/), [vite](https://vitejs.dev), and
-[Rollup.js](https://rollupjs.org).
+- Show hotkeys based on a keyboard layout in Obsidian.
+
+![img.png](https://raw.githubusercontent.com/Quorafind/Obsidian-Virtual-Hotkey-Keyboard/master/media/virtual-hotkey-board.png)
 
 # Getting Started
 
-Click "use this template" to create your own fork of this repo. Make sure to reference the official sample plugin for
-information about how to get started with the Obsidian API and how to submit your plugin to the Community Plugin
-Gallery.
+### From Plugin Market in Obsidian
 
-```bash
-# for local development
-npm install
-npm run dev
-// Or yarn dev
+💜: [Not available now] Directly install from Obsidian Market.
 
-# for a production bundle
-npm install
-npm run build
-// Or yarn build
+### From BRAT
 
-# change version
-npm bumpversion
-// Or yarn bumpversion
-```
+🚗: Add `Quorafind/Obsidian-Virtual-Hotkey-Keyboard` to BRAT.
 
-# Stats
+### Download Manually
 
-The production output of this sample plugin is ~10 KB.
+🚚: Download the latest release. Extract and put the three files (main.js, manifest.json, styles.css) to
+folder `{{obsidian_vault}}/.obsidian/plugins/Obsidian-Virtual-Hotkey-Keyboard`.
 
-```
-./styles.css   0.44 KiB / gzip: 0.19 KiB
-./main.js      12.63 KiB / gzip: 3.70 KiB
-```
+## Say Thank You
 
-## API Documentation
+If you are enjoy using Obsidian-Table-Generator then please support my work and enthusiasm by buying me a coffee
+on [https://www.buymeacoffee.com/boninall](https://www.buymeacoffee.com/boninall).
 
-See https://github.com/obsidianmd/obsidian-api
+<a href="https://www.buymeacoffee.com/boninall"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=boninall&button_colour=6495ED&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
+
+

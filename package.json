@@ -6,7 +6,8 @@
     "scripts": {
         "lint": "eslint . --ext .ts",
         "dev": "npm run lint && vite build --watch",
-        "build": "npx svelte-check && vite build",
+        "build:dev": "vite build",
+        "build:production": "vite build --mode=production",
         "bumpversion": "node version-bump.mjs && git add manifest.json versions.json"
     },
     "keywords": [],
