@@ -8,7 +8,8 @@
 
     let keyDescList: any[] = [];
     let filteredKeyDescList: any[] = [];
-    let keyListData = mainKeyListData;
+    let mainKeyList = mainKeyListData;
+    let funcKeyList = funcKeyListData;
     let modList: string[] = [];
 
     const complexItems = [
@@ -36,11 +37,26 @@
     }
 
     function updateKeyDescription() {
-        let newKeyListData: any[] = [];
+        let tempMainKeyListData: any[] = [];
+        let tempFuncKeyListData: any[] = [];
         for (let i = 0; i < mainKeyListData.length; i++) {
-            let tempKeyList = mainKeyListData[i].keyList;
+            let tempMainKeyList = mainKeyListData[i].keyList;
+            let tempFuncKeyList = funcKeyListData[i].keyList;
             filteredKeyDescList.forEach(item => {
-                tempKeyList = tempKeyList.map(hotkey => (hotkey.basicKey === item.key || modList.includes(hotkey.basicKey)) ? {
+                tempMainKeyList = tempMainKeyList.map(hotkey => (hotkey.basicKey === item.key || modList.includes(hotkey.basicKey)) ? {
+                    basicKeyCode: hotkey.basicKeyCode,
+                    basicKey: hotkey.basicKey,
+                    secondKey: hotkey.secondKey,
+                    description: modList.includes(hotkey.basicKey) ? hotkey.description : item.id,
+                    highlight: true,
+                } : {
+                    basicKeyCode: hotkey.basicKeyCode,
+                    basicKey: hotkey.basicKey,
+                    secondKey: hotkey.secondKey,
+                    description: hotkey.description,
+                    highlight: hotkey.highlight,
+                });
+                tempFuncKeyList = tempFuncKeyList?.map(hotkey => (hotkey.basicKey === item.key || modList.includes(hotkey.basicKey)) ? {
                     basicKeyCode: hotkey.basicKeyCode,
                     basicKey: hotkey.basicKey,
                     secondKey: hotkey.secondKey,
@@ -54,12 +70,17 @@
                     highlight: hotkey.highlight,
                 });
             });
-            newKeyListData.push({
+            tempMainKeyListData.push({
                 list: i,
-                keyList: tempKeyList
+                keyList: tempMainKeyList
+            });
+            tempFuncKeyListData.push({
+                list: i,
+                keyList: tempFuncKeyList
             });
         }
-        keyListData = newKeyListData;
+        mainKeyList = tempMainKeyListData;
+        funcKeyList = tempFuncKeyListData;
     }
 </script>
 
@@ -69,7 +90,7 @@
 </div>
 <div class="virtual-keyboard-container vhk-w-full vhk-flex" on:keydown|preventDefault={()=>{console.log("hello")}}>
     <div class="virtual-keyboard-layout-main vhk-grid vhk-grid-rows-6 vhk-gap-2 vhk-w-4/5 vhk-mb-auto vhk-p-2 ">
-        {#each keyListData as keyPair, index}
+        {#each mainKeyList as keyPair, index}
             <div
                 class="keyboard-list-{index + 1} vhk-grid {index === 5 ? 'vhk-grid-cols-36': 'vhk-grid-cols-30'} vhk-gap-2">
                 {#each keyPair.keyList as key}
@@ -82,13 +103,13 @@
         {/each}
     </div>
     <div class="virtual-keyboard-layout-func vhk-grid vhk-grid-rows-6 vhk-w-1/6 vhk-gap-2 vhk-p-2">
-        {#each funcKeyListData as keyPair, index}
+        {#each funcKeyList as keyPair, index}
             <div class="keyboard-list-{index + 1} vhk-grid vhk-grid-cols-6 vhk-gap-2">
                 {#each keyPair.keyList as key}
                     <VirtualKey basicKey={key.basicKey}
                                 keyDesc={key.description}
                                 secondKey={key.secondKey}
-                                highlight={false}/>
+                                highlight={key.highlight}/>
                 {/each}
             </div>
         {/each}
