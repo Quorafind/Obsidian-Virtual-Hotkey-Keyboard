@@ -1,6 +1,6 @@
 {
     "name": "obsidian-virtual-hotkey-keyboard",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A plugin development template for devs who want to use svelte in Obsidian.",
     "main": "main.js",
     "scripts": {

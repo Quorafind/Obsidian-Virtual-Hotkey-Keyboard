@@ -647,7 +647,7 @@ export const funcKeyListData: keyPair[] = [
         list: 4,
         keyList: [
             {
-                basicKey: "Up",
+                basicKey: "ArrowUp",
                 basicKeyCode: 0,
                 secondKey: "",
                 description: "",
@@ -659,21 +659,21 @@ export const funcKeyListData: keyPair[] = [
         list: 5,
         keyList: [
             {
-                basicKey: "Left",
+                basicKey: "ArrowLeft",
                 basicKeyCode: 0,
                 secondKey: "",
                 description: "",
                 highlight: false,
             },
             {
-                basicKey: "Down",
+                basicKey: "ArrowDown",
                 basicKeyCode: 0,
                 secondKey: "",
                 description: "",
                 highlight: false,
             },
             {
-                basicKey: "Right",
+                basicKey: "ArrowRight",
                 basicKeyCode: 0,
                 secondKey: "",
                 description: "",

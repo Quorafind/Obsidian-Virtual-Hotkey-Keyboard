@@ -1,4 +1,4 @@
-import { ItemView, Platform, Plugin, WorkspaceLeaf } from 'obsidian';
+import { App, ItemView, Modal, Platform, Plugin, WorkspaceLeaf } from 'obsidian';
 import "./virtualHotkeyApp.css";
 
 import VirtualHotkeyBoard from "./component/VirtualHotkeyBoard.svelte";
@@ -36,6 +36,15 @@ export default class VirtualHotkeyBoardPlugin extends Plugin {
 
         this.app.workspace.onLayoutReady(this.onLayoutReady.bind(this));
 
+        // This adds a simple command that can be triggered anywhere
+        this.addCommand({
+            id: 'open-virtual-hotkey-modal-simple',
+            name: 'Open Virtual Hotkey Board Model',
+            callback: () => {
+                new VirtualHotkeyBoardModal(this.app).open();
+            }
+        });
+
         this.addCommand({
             id: "open-virtual-hotkey-view",
             name: "Open Virtual Hotkey Board",
@@ -71,3 +80,22 @@ export default class VirtualHotkeyBoardPlugin extends Plugin {
         workspace.revealLeaf(leaf);
     }
 }
+
+class VirtualHotkeyBoardModal extends Modal {
+    constructor(app: App) {
+        super(app);
+    }
+
+    onOpen() {
+        const { contentEl } = this;
+        contentEl.addClasses(["sample-modal"]);
+        contentEl.setText('Woah!');
+    }
+
+    onClose() {
+        const { contentEl } = this;
+        contentEl.empty();
+    }
+}
+
+
