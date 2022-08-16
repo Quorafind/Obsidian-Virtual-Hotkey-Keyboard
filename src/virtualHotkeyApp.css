@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.theme-dark .svelte-select {
+    --tw-bg-opacity: 1;
+    background-color: rgb(38 38 38 / var(--tw-bg-opacity)) !important;
+    border: 1px rgb(38 38 38 / var(--tw-bg-opacity)) solid !important;
+}
+
+.theme-dark .svelte-select-list {
+    --tw-bg-opacity: 1;
+    background-color: rgb(64 64 64 / var(--tw-bg-opacity)) !important;
+    border: 1px rgb(38 38 38 / var(--tw-bg-opacity)) solid !important;
+}
+
+.theme-dark .svelte-select-list .list, .theme-dark .svelte-select-list .list-item {
+    --tw-bg-opacity: 1;
+    background-color: rgb(64 64 64 / var(--tw-bg-opacity)) !important;
+    border: 1px rgb(38 38 38 / var(--tw-bg-opacity)) solid !important;
+}
+
+.theme-dark .svelte-select .multi-item {
+    --tw-bg-opacity: 1;
+    background-color: rgb(64 64 64 / var(--tw-bg-opacity)) !important;
+    border: 1px rgb(38 38 38 / var(--tw-bg-opacity)) solid !important;
+}
+
+.virtual-hotkey-modal {
+    width: 80%;
+}
+
+.virtual-hotkey-modal .svelte-select {
+    width: 80%;
+}
+
+.svelte-select-list {
+    position: fixed;
+    z-index: 51;
+}
+
+.svelte-select-list .item.hover {
+    width: 100%;
+}
+
+.hotkey-search-container .lucide-keyboard {
+    transform: scale(1.2);
+}
