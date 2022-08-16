@@ -65,19 +65,21 @@
 </script>
 
 <div
-    class="{spanClass[spanLength]} {colStartClass[colStart]} vhk-h-16 {highlight ? 'vhk-bg-neutral-300 vhk-shadow-neutral-600 vhk-drop-shadow-lg' : 'vhk-bg-neutral-100 vhk-shadow-neutral-300 vhk-drop-shadow-lg'} {(highlight && modKey) ? 'vhk-bg-stone-300 vhk-shadow-stone-600 vhk-border-2 vhk-border-dashed vhk-border-indigo-300 vhk-drop-shadow-sm' : ''} vhk-rounded-md">
+    class="virtual-hotkey {spanClass[spanLength]} {colStartClass[colStart]} vhk-h-16 {highlight ? 'vhk-bg-neutral-300 vhk-shadow-neutral-600 vhk-drop-shadow-lg dark:vhk-bg-neutral-700 dark:vhk-shadow-neutral-800 dark:vhk-text-gray-200' : 'vhk-bg-neutral-100 vhk-shadow-neutral-300 vhk-drop-shadow-lg dark:vhk-bg-neutral-800 dark:vhk-shadow-neutral-1000'} {(highlight && modKey) ? 'vhk-bg-stone-300 vhk-shadow-stone-600 vhk-border-2 vhk-border-dashed vhk-border-indigo-300 vhk-drop-shadow-sm' : ''} vhk-rounded-md"
+    data-type="{basicKey}"
+>
     <div class="key-code">
-        <div class="vhk-content-center vhk-text-center vhk-text-slate-400">
+        <div class="first-key vhk-content-center vhk-text-center vhk-text-slate-400 dark:vhk-text-gray-400">
             {arrowKey > 0 ? arrowKeyList[arrowKey] : basicKey}
         </div>
         {#if (secondKey.length > 0)}
-            <div class="vhk-content-center vhk-text-center">
+            <div class="second-key vhk-content-center vhk-text-center">
                 {secondKey}
             </div>
         {/if}
     </div>
     <div class="key-desc">
-        <div class="vhk-content-center vhk-text-center vhk-text-xs">
+        <div class="key-desc-text vhk-content-center vhk-text-center vhk-text-xs">
             {keyDesc.length > 0 ? keyDesc?.split(':')[1]?.trim() : ""}
         </div>
     </div>

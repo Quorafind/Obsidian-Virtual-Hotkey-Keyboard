@@ -13,6 +13,7 @@ specifiers:
   monkey-around: ^2.3.0
   obsidian: latest
   postcss: ^8.4.14
+  postcss-replace: ^2.0.0
   svelte: ^3.49.0
   svelte-check: ^2.8.0
   svelte-preprocess: ^4.10.7
@@ -35,6 +36,7 @@ devDependencies:
   monkey-around: 2.3.0
   obsidian: 0.15.9
   postcss: 8.4.14
+  postcss-replace: 2.0.0_postcss@8.4.14
   svelte: 3.49.0
   svelte-check: 2.8.0_nxvsp6sjiltnatqa6jdm4mr6zu
   svelte-preprocess: 4.10.7_bgntxiihuqhg5mwaa7nczjwpga
@@ -534,6 +536,10 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.2
+    dev: true
+
+  /deep-get-set/1.1.1:
+    resolution: {integrity: sha512-dBrY4GeR55KfyF9Ipswif/Et4muInKpXkf3ro9hFT/8OdPMVsEGNSfuGzfBv/dJKKwKSqInoZGKV5f40bA7TJA==}
     dev: true
 
   /deep-is/0.1.4:
@@ -1178,6 +1184,11 @@ packages:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
     dev: true
 
+  /kind-of/6.0.3:
+    resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
   /kleur/4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
@@ -1442,6 +1453,17 @@ packages:
     dependencies:
       postcss: 8.4.14
       postcss-selector-parser: 6.0.10
+    dev: true
+
+  /postcss-replace/2.0.0_postcss@8.4.14:
+    resolution: {integrity: sha512-8d64/c/dJL2/zjnQvCD1/eH04xMreXFHdC9F0APl/M7Cg0KyLvN+f/HCb87jbyG1dyIbR4zD7sxl/W4JIp9ppQ==}
+    engines: {node: ^12 || ^14 || >=16}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      deep-get-set: 1.1.1
+      kind-of: 6.0.3
+      postcss: 8.4.14
     dev: true
 
   /postcss-selector-parser/6.0.10:

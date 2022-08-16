@@ -5,6 +5,7 @@ module.exports = {
     corePlugins: {
         preflight: false,
     },
+    darkMode: ['class', '.theme-dark'],
     theme: {
         extend: {
             gridColumn: {

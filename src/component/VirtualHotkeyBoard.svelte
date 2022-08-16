@@ -86,7 +86,8 @@
 
 <div class="virtual-keyboard-hotkey-selector vhk-w-2/5 vhk-ml-2 vhk-mt-2">
     <Select items={complexItems} isMulti={true} on:change={handleSelect}
-            placeholder="Select Modifier Key[s] Here"></Select>
+            placeholder="Select Modifier Key[s] Here"
+    ></Select>
 </div>
 <div class="virtual-keyboard-container vhk-w-full vhk-flex" on:keydown|preventDefault={()=>{console.log("hello")}}>
     <div class="virtual-keyboard-layout-main vhk-grid vhk-grid-rows-6 vhk-gap-2 vhk-w-4/5 vhk-mb-auto vhk-p-2 ">
