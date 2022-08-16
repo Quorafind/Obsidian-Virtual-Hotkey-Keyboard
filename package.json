@@ -7,7 +7,7 @@
         "lint": "eslint . --ext .ts",
         "dev": "npm run lint && vite build --watch",
         "build:dev": "vite build --watch --mode=development",
-        "build:production": "vite build --mode=production",
+        "build:prod": "vite build --mode=production",
         "bumpversion": "node version-bump.mjs && git add manifest.json versions.json"
     },
     "keywords": [],
