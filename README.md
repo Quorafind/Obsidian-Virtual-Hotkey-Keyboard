@@ -8,6 +8,11 @@ A plugin for showing hotkeys based on a keyboard layout in Obsidian .
 
 ![img.png](https://raw.githubusercontent.com/Quorafind/Obsidian-Virtual-Hotkey-Keyboard/master/media/virtual-hotkey-board.png)
 
+# Thanks
+
+Monkey-around stuff from [pjeby's Hotkey-Helper](https://github.com/pjeby/hotkey-helper)
+&& [valentine195's obsidian-settings-search](https://github.com/valentine195/obsidian-settings-search)
+
 # Getting Started
 
 ### From Plugin Market in Obsidian
