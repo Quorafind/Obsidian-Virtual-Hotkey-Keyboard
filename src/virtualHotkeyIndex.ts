@@ -106,7 +106,7 @@ export default class VirtualHotkeyBoardPlugin extends Plugin {
             id: "open-virtual-hotkey-view",
             name: "Open Virtual Hotkey Board",
             callback: () => {
-                this.openVirtualHotkeyBoardView.bind(this)
+                this.openVirtualHotkeyBoardView();
             }
         });
 
