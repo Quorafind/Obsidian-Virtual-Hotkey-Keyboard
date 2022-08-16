@@ -81,7 +81,7 @@ class VirtualHotkeyBoardView extends ItemView {
     }
 
     async onOpen(): Promise<void> {
-        new VirtualHotkeyBoard({ target: (this as any).contentEl, props: {} });
+        new VirtualHotkeyBoard({ target: this.contentEl, props: {} });
     }
 }
 
@@ -111,7 +111,6 @@ export default class VirtualHotkeyBoardPlugin extends Plugin {
         });
 
         // This creates an icon in the left ribbon.
-        console.log(this.settings.addSidebarRibbon);
         switch (this.settings.addSidebarRibbon) {
             case 'openView':
                 this.addRibbonIcon('keyboard', 'Virtual Hotkey Board', (evt: MouseEvent) => this.openVirtualHotkeyBoardView());
@@ -130,7 +129,7 @@ export default class VirtualHotkeyBoardPlugin extends Plugin {
             (leaf: WorkspaceLeaf) => (this.view = new VirtualHotkeyBoardView(leaf))
         );
         this.app.workspace.onLayoutReady(this.onLayoutReady.bind(this));
-        
+
         this.registerEvent((this.app.workspace as Events).on("plugin-settings:plugin-control", (setting, manifest, enabled, tabId) => {
             this.globalsAdded;
         }));
@@ -262,8 +261,6 @@ class VirtualHotkeyBoardSettingTab extends PluginSettingTab {
                         await this.plugin.saveSettings();
                     }),
             );
-
-        console.log(this.plugin.settings.addSidebarRibbon);
 
         this.containerEl.createEl('h2', { text: 'Say Thank You' });
 

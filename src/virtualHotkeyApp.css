@@ -17,7 +17,7 @@
 .theme-dark .svelte-select-list .list, .theme-dark .svelte-select-list .list-item {
     --tw-bg-opacity: 1;
     background-color: rgb(64 64 64 / var(--tw-bg-opacity)) !important;
-    border: 1px rgb(38 38 38 / var(--tw-bg-opacity)) solid !important;
+    /*border: 1px rgb(38 38 38 / var(--tw-bg-opacity)) solid !important;*/
 }
 
 .theme-dark .svelte-select .multi-item {
@@ -41,6 +41,11 @@
 
 .svelte-select-list .item.hover {
     width: 100%;
+
+}
+
+.theme-dark .svelte-select-list .item.hover {
+    background-color: #54576e !important;
 }
 
 .hotkey-search-container .lucide-keyboard {
