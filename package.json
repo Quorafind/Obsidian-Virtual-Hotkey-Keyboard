@@ -1,6 +1,6 @@
 {
     "name": "obsidian-virtual-hotkey-keyboard",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "A plugin for showing hotkeys based on a keyboard layout in Obsidian.",
     "main": "main.js",
     "scripts": {

@@ -89,7 +89,7 @@
             placeholder="Select Modifier Key[s] Here"
     ></Select>
 </div>
-<div class="virtual-keyboard-container vhk-w-full vhk-flex" on:keydown|preventDefault={()=>{console.log("hello")}}>
+<div class="virtual-keyboard-container vhk-w-full vhk-flex">
     <div class="virtual-keyboard-layout-main vhk-grid vhk-grid-rows-6 vhk-gap-2 vhk-w-4/5 vhk-mb-auto vhk-p-2 ">
         {#each mainKeyList as keyPair, index}
             <div
