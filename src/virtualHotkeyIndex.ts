@@ -168,13 +168,6 @@ export default class VirtualHotkeyBoardPlugin extends Plugin {
                 },
             }));
         }
-
-        if (this.app.workspace.getLeavesOfType(VIEW_TYPE).length) {
-            return;
-        }
-        this.app.workspace.getRightLeaf(false).setViewState({
-            type: VIEW_TYPE,
-        });
     }
 
     async openVirtualHotkeyBoardView() {
